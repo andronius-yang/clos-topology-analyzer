@@ -22,5 +22,18 @@ public class Main {
                 "Three-layer bisection bandwidth: " + BisectionAnalyzer.calculateBisectionBandwidth(threeLayer));
         System.out.println(
                 "Two-layer bisection bandwidth: " + BisectionAnalyzer.calculateBisectionBandwidth(twoLayer));
+
+        // stress test
+        int d = 20;
+        int n = (d * d * d) / 4; // 2000
+        ClosTopology threeLayerLarge = new ClosTopology(n, d, 1, true);
+
+        System.out.println("\nThree-Layer Topology Switch Analysis (d=20, n=2000):");
+        SwitchAnalyzer.countSwitches(threeLayerLarge);
+
+        int bw = BisectionAnalyzer.calculateBisectionBandwidth(threeLayerLarge);
+        int expectedBw = (d * d * d) / 8; // d^3/8 w/ r=1
+        System.out.println("Three-layer bisection bandwidth (d=20): " + bw + " (expected " + expectedBw + ")");
     }
+
 }
