@@ -7,7 +7,7 @@ This project programmatically constructs both **two-layer (folded Clos)** and **
 - **Redundant paths** between server pairs
 - **Bisection bandwidth** across network partitions
 
-A full explanation of the design, derivations, and experimental results is provided in the accompanying writeup.md file, located in the project root.
+A full explanation of the design, derivations, and experimental results is provided in the accompanying writeup.pdf file, located in the project root.
 The writeup details the mathematical derivations for switch counts, redundancy, and bisection bandwidth, and explains how the implementation aligns with theoretical Clos network properties.
 
 ---
